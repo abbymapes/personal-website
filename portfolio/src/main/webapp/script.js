@@ -1,56 +1,9 @@
-// Copyright 2019 Google LLC
-//
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-//
-//     https://www.apache.org/licenses/LICENSE-2.0
-//
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
-
-/**
- * Adds a random song to the page.
- */
-function addRandomSong() {
-  const songs =
-      ['Hey Jude', 
-      'First Day of My Life', 
-      'Perfect', 'Youth', 'Brown-Eyed Girl',
-      'You and I', 'Drops of Jupiter'];
-
-  // Pick a random song.
-  const song = songs[Math.floor(Math.random() * songs.length)];
-
-  // Add it to the page.
-  document.getElementById('song-container').innerText = song;
-}
-
-/**
- * Adds a random musical to the page.
- */
-function addRandomMusical() {
-  const musicals =
-      ['Hamilton', 
-      'Les Misérables', 
-      'Wicked', 'Grease', 'Phantom of the Opera',
-      'Jersey Boys'];
-
-  // Pick a random musical.
-  const musical = musicals[Math.floor(Math.random() * musicals.length)];
-
-  // Add it to the page.
-  document.getElementById('musical-container').innerText = musical;
-}
-
 /**
  * Fetches comment form the servers based on input.
  */
 function setAuthMode(input) {
   fetch(input).then(response => response.json()).then((status) => {
+      console.log("Gets fetch");
       const form = document.getElementById('comment-form');
       form.innerHTML = status;
       getComments();
@@ -61,6 +14,7 @@ function setAuthMode(input) {
  * Sets user mode for commenting.
  */
 function getUserMode() {
+    console.log("Calls function");
     setAuthMode("/login");
 }
 
@@ -109,7 +63,7 @@ function createTableRowElement(commentObj) {
     thElement.innerHTML = '<abbr title="' + commentObj.email + '"'+ 
         'style = "text-decoration: none">' +
         '<a href = "mailto:' + commentObj.email + '" target="_blank"'+
-        'style = "text-decoration: none">' +
+        'class = "link-name">' +
         commentObj.name +
         '</a></abbr>';
     }
@@ -137,8 +91,8 @@ function createMap() {
   	{center: {lat: 40, lng: -110}, 
      zoom: 3,
      styles: [
-            {elementType: 'geometry', stylers: [{color: '#fffed6'}]},
-            {elementType: 'labels.text.stroke', stylers: [{color: '#fffed6'}]},
+            {elementType: 'geometry', stylers: [{color: '#f7f0ed'}]},
+            {elementType: 'labels.text.stroke', stylers: [{color: '#f7f0ed'}]},
             {elementType: 'labels.text.fill', stylers: [{color: '#9c9c9c'}]},
             {
               featureType: 'administrative.locality',
@@ -153,7 +107,7 @@ function createMap() {
             {
               featureType: 'poi.park',
               elementType: 'geometry',
-              stylers: [{color: '#fff5b8'}]
+              stylers: [{color: '#f7f0ed'}]
             },
             {
               featureType: 'poi.park',
@@ -173,7 +127,7 @@ function createMap() {
             {
               featureType: 'road',
               elementType: 'labels.text.fill',
-              stylers: [{color: '#9ca4ff'}]
+              stylers: [{color: '#D6D6D6'}]
             },
             {
               featureType: 'road.highway',
@@ -223,7 +177,7 @@ function createMap() {
 function setMarkers(map){
   const pinkStar = {
       path: 'M 125,5 155,90 245,90 175,145 200,230 125,180 50,230 75,145 5,90 95,90 z',
-      fillColor: '#ff29a9',
+      fillColor: '#F9A38B',
       fillOpacity: 1.0,
       scale: 0.08,
       strokeColor: 'white',
@@ -235,7 +189,7 @@ function setMarkers(map){
 
   const balboaStar = {
       path: 'M 125,5 155,90 245,90 175,145 200,230 125,180 50,230 75,145 5,90 95,90 z',
-      fillColor: '#ff29a9',
+      fillColor: '#F9A38B',
       fillOpacity: 1.0,
       scale: 0.08,
       strokeColor: 'white',
@@ -248,7 +202,7 @@ function setMarkers(map){
 	var markerBeachClub = new google.maps.Marker({
     position: {lat: 34.025815, lng: -118.515820},
     title: 'Santa Monica Beach',
-    label: {text: 'Santa Monica Beach', color: '#d4007f'},
+    label: {text: 'Santa Monica Beach', color: '#5B5D5D'},
     map: map,
     icon: pinkStar
   });
@@ -256,7 +210,7 @@ function setMarkers(map){
 	var markerDuke = new google.maps.Marker({
     position: {lat: 36.0014, lng: -78.9382},
     title: 'Duke University',
-    label: {text: 'Duke University', color: '#d4007f'},
+    label: {text: 'Duke University', color: '#5B5D5D'},
     map: map,
     icon: pinkStar
   });
@@ -264,7 +218,7 @@ function setMarkers(map){
 	var markerBalboa = new google.maps.Marker({
     position: {lat: 33.606222, lng: -117.893036},
     title: 'Balboa Island',
-   	label: {text:'Balboa Island', color: '#d4007f'},
+   	label: {text:'Balboa Island', color: '#5B5D5D'},
     map: map,
     icon: balboaStar
   });
@@ -272,7 +226,7 @@ function setMarkers(map){
 	var markerHonolua = new google.maps.Marker({
     position: {lat: 21.011843, lng: -156.638599},
 		title: 'Honolua Bay',
-		label: {text: 'Honolua Bay', color: '#d4007f'},
+		label: {text: 'Honolua Bay', color: '#5B5D5D'},
     map: map,
     icon: pinkStar
   });
@@ -327,11 +281,11 @@ function setMarkers(map){
   });
   markerDuke.addListener('mouseover', function(){
    	pinkStar.fillColor = "white";
-    pinkStar.strokeColor = '#ff29a9';
+    pinkStar.strokeColor = '#F9A38B';
   	markerDuke.setIcon(pinkStar);
   });
   markerDuke.addListener('mouseout', function(){
-    pinkStar.fillColor = '#ff29a9';
+    pinkStar.fillColor = '#F9A38B';
   	pinkStar.strokeColor = "white";
    	markerDuke.setIcon(pinkStar);
   });
@@ -343,11 +297,11 @@ function setMarkers(map){
   });
   markerHonolua.addListener('mouseover', function(){
     	pinkStar.fillColor = "white";
-      pinkStar.strokeColor = '#ff29a9';
+      pinkStar.strokeColor = '#F9A38B';
     	markerHonolua.setIcon(pinkStar);
   });
   markerHonolua.addListener('mouseout', function(){
-      pinkStar.fillColor = '#ff29a9';
+      pinkStar.fillColor = '#F9A38B';
     	pinkStar.strokeColor = "white";
     	markerHonolua.setIcon(pinkStar);
   });
@@ -359,11 +313,11 @@ function setMarkers(map){
   });
   markerBalboa.addListener('mouseover', function(){
     	balboaStar.fillColor = "white";
-      balboaStar.strokeColor = '#ff29a9';
+      balboaStar.strokeColor = '#F9A38B';
     	markerBalboa.setIcon(balboaStar);
   });
   markerBalboa.addListener('mouseout', function(){
-      balboaStar.fillColor = '#ff29a9';
+      balboaStar.fillColor = '#F9A38B';
     	balboaStar.strokeColor = "white";
     	markerBalboa.setIcon(balboaStar);
   });
@@ -375,11 +329,11 @@ function setMarkers(map){
   });
   markerBeachClub.addListener('mouseover', function(){
     	pinkStar.fillColor = "white";
-      pinkStar.strokeColor = '#ff29a9';
+      pinkStar.strokeColor = '#F9A38B';
     	markerBeachClub.setIcon(pinkStar);
   });
   markerBeachClub.addListener('mouseout', function(){
-      pinkStar.fillColor = '#ff29a9';
+      pinkStar.fillColor = '#F9A38B';
     	pinkStar.strokeColor = "white";
     	markerBeachClub.setIcon(pinkStar);
   });
@@ -432,42 +386,4 @@ function getMenuBar() {
   } else {
     x.className = "topnav";
   }
-}
-
-/**
- * Sets all section colors to variations of a randomly generated color
- */
-function setBackgroundColor(){
-  const hue_number = (Math.floor(Math.random() * 35) + 1) * 10;
-  const intro = document.getElementsByClassName("intro");
-  const sect1 = document.getElementsByClassName("sect-school");
-  const sect2 = document.getElementsByClassName("sect-home");
-  const sect3 = document.getElementsByClassName("sect-work");
-  const sect4 = document.getElementsByClassName("sect-dogs");
-  const sect5 = document.getElementsByClassName("sect-song");
-  const sect6 = document.getElementsByClassName("sect-art");
-  const sect7 = document.getElementsByClassName("sect-musical");
-  const sect8 = document.getElementsByClassName("sect-map");
-  const goodbye = document.getElementsByClassName("goodbye");
-  const grid = document.getElementsByClassName("grid-container");
-  const title = document.getElementsByClassName("fun-title");
-  const musical = document.getElementById("musical-container");
-  const song = document.getElementById("song-container");
-  const content = document.getElementById("content");
-
-  content.style.backgroundColor = "hsl("+ hue_number + ", 100%, 95%)";
-  musical.style.backgroundColor = "hsl("+ hue_number + ", 100%, 95%)";
-  song.style.backgroundColor = "hsl("+ hue_number + ", 100%, 95%)";
-  intro[0].style.backgroundColor = "hsl("+ hue_number + ", 100%, 95%)";
-  goodbye[0].style.backgroundColor = "hsl("+ hue_number + ", 100%, 95%)";
-  grid[0].style.backgroundColor = "hsl("+ hue_number + ", 100%, 95%)";
-  sect1[0].style.backgroundColor = "hsl("+ hue_number + ", 100%, 90%)";
-  sect2[0].style.backgroundColor = "hsl("+ hue_number + ", 100%, 85%)";
-  sect3[0].style.backgroundColor = "hsl("+ hue_number + ", 100%, 85%)";
-  title[0].style.backgroundColor = "hsl("+ hue_number + ", 100%, 95%)";
-  sect4[0].style.backgroundColor = "hsl("+ hue_number + ", 100%, 90%)";
-  sect5[0].style.backgroundColor = "hsl("+ hue_number + ", 100%, 85%)";
-  sect6[0].style.backgroundColor = "hsl("+ hue_number + ", 100%, 85%)";
-  sect7[0].style.backgroundColor = "hsl("+ hue_number + ", 100%, 85%)";
-  sect8[0].style.backgroundColor = "hsl("+ hue_number + ", 100%, 80%)";
 }

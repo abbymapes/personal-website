@@ -1,148 +1,150 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>My Portfolio</title>
-        <link rel="stylesheet" href="style.css">
-        <link href='https://fonts.googleapis.com/css?family=GFS Neohellenic' rel='stylesheet'>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <script src="script.js"></script>
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDjXCSPI4yzByHxDXafuG1ScI5opZmOAyg"></script>
-    </head>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="script.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDjXCSPI4yzByHxDXafuG1ScI5opZmOAyg"></script>
+  </head>
 
-    <body onload = "createMap();">
-      <div id = "content" class = "rainbow-text">
+  <body onload = "createMap();">
+    <div id = "content" class = "gradient-background">
       <div class="topnav" id="myTopnav">
         <a href="/index.html" class="active">Home</a>
-        <a href="/about.html">About Me</a>
+        <a href="/about.html">About</a>
+        <a href="/projects.html">Projects</a>
         <a href="/resume.html">Resume</a>
         <a href="/comments.html">Comments</a>
         <a href="javascript:void(0);" class="icon" onclick="getMenuBar()">
           <i class="fa fa-bars"></i>
         </a>
       </div>
-            <div class="grid-overall-container">
 
-                <div class="side"></div>
+      <div class="grid-overall-container">
+        <div class="center">
+          <div class="header"><h1>About Me</h1></div>
+          <br>
+          <div class="grid-container">
+            <div class="sect-school" >
+              <p>Hi, I'm Abby! It's a pleasure to have you 
+                here.<br><br> I am an incoming junior at 
+                <b>Duke University</b>, pursuing a Bachelor of Science in 
+                <b>Computer Science</b> and a certificate in 
+                <a href = "https://iss.duke.edu/undergraduate-certificate"
+                    target="_blank" class = "link">Information Science + Studies</a>. 
+                <br><br>
 
-                <div class="center">
-                    <div class="header"><h1>About Me</h1></div>
-                    <br>
-                    <div class="grid-container">
-                        <div class="intro">
-                          <p>Welcome to my portfolio! It's a pleasure to have you here!</p>
-                          <p>First, let's focus on you. Don't like this color?</p>
-                          <button onclick="setBackgroundColor()">Click Me!</button>
-                          <p>Now, let's get started.</p>
-                        </div>
+                Last summer, I worked as a Junior Information Analyst for 
+                <b>UCLA External Affairs</b>' Application Development team. This summer, 
+                I am working as a STEP intern (Student Training in Engineering Program)
+                 at <b> Google </b>.<br>
+                </p>
+                <h3 style = "background-color: hsl(15, 100%, 98%); 
+                padding:5px; color: hsl(180, 1%, 30%)">Coding Languages</h3>
+                  <p><b style="color:hsl(180, 1%, 40%)">Expert:</b> Java, Python, C</p>
+                  <p><b style="color:hsl(180, 1%, 40%)">Proficient:</b> HTML/CSS, JavaScript, SQL, MIPS, R</p>
+            </div>
 
-                        <div class="sect-school">
-                          <p>I am an incoming Junior at Duke University.I am pursuing a 
-                          <abbr title="Bachelor of Science Degree">B.S.</abbr> 
-                          in Computer Science and a certificate in 
-                          <a href = "https://iss.duke.edu/undergraduate-certificate"
-                          target="_blank">Information 
-                          Science + Studies</a>.
-                          <br>
-                          <br>
-                          <img src="/images/duke.png" alt = "Duke Logo."/></p>  
+            <div class="sect-campus">
+              <p>I am the web editor for Duke's online publication,
+              <br>
+              <a href = "http://getthestandard.com/" target="_blank" class = "link"> 
+              The Standard. </a></p>
+            </div>
 
-                          <h3 style = "background-color: hsl(0, 0%, 100%, 0.5); padding:5px">Coding Languages</h3>
-                          <p><b>Expert:</b> Java, Python, C</p>
-                          <p><b>Proficient:</b> HTML/CSS, JavaScript, SQL, MIPS, R</p>
-                        </div>
+            <div class="sect-spire">
+              <p>I am a <a href = "https://spire.duke.edu/fellows/abby-mapes" target="_blank" 
+              class = "link">
+              SPIRE</a> fellow
+              <br> (STEM Pathways for Inclusion, Readiness, and Excellence).</p>
+            </div>
 
-                        <div class="sect-home">
-                          <p>I was born and raised in Los Angeles.<br>
-                          <img src="/images/losangeles.png" alt = "Picture of Los Angeles." /></p>
-                        </div>
+            <div class="sect-club">
+              <p>I am part of Duke's Creative (Art|Tech) Community,<br>
+              <a href = "https://dukeartistcollective.com/" target="_blank" class = "link">
+              Duke Artist Collective</a>.</p><br>
+            </div>
 
-                        <div class="sect-work">
-                          <p> I am currently a <abbr title="Student Training in Engineering Program">
-                          STEP</abbr>  intern at Google. <br>
-                          <img src="/images/google.gif" alt = "Google gif." /></p>
-                        </div>
+            <div class="fun-title">
+              <h3 style = "font-size: 32px; color: hsl(15, 100%, 75%);">Things That Make Me Happy</h3>
+            </div>
 
-                        <div class="fun-title">
-                            <h3 style = "font-size: 32px">Things That Make Me Happy</h3>
-                        </div>
+            <div class="sect-interests">
+              <p>In my free time, I play the guitar and (attempt to) sing. Brown Eyed Girl, 
+              Hey Jude, Drops of Jupiter, and First Day of My Life are my go-to songs.
+              <br><br>
 
-                        <div class="sect-dogs">
-                          <p style = "font-size: 14pt">My Dogs.</p>
-                          <img src="/images/dogs.png" alt = "Picture of my Dogs."/>
-                          <p> Yes, there are three of them. </p>
-                        </div>
+              I love jogging, hiking, walking, and doing basically anything outside. I 
+              love to play beach volleyball, paddle tennis, Rumikub, and Spikeball, 
+              even though I tend to get a little too competitive.
+              <br><br>
+                          
+              My mom is an artist. So, I've always loved art. 
+              That's why, upon taking my first Computer Science
+              class, I knew I had found my “thing”– 
+              something that combined the systematic logic I love about math 
+              with the creativity I grew up with as an artist’s daughter.
+              <br><br>
+                          
+              Last, but certainly not least, I love my dogs.</p>
+              <img src="/images/dogs.png" alt = "Picture of my Dogs."/>
+              <p> Yes, there are three of them. </p>
+            </div>
 
-                        <div class="sect-song">
-                          <p style = "font-size: 14pt">Playing the guitar.</p>
-                          <p><button onclick="addRandomSong()">My Favorite Songs to Play</button>
-                          <div id="song-container"></div></p>
-                        </div>
+            <div class="sect-map">
+              <div class="header-places"><h3 style = "font-size: 32px; color: hsl(15, 100%, 80%);">My Happy Places</h3></div>
+              <br>
+              <div id="img-content">
+                <div id="map"></div>
+              </div>
+            </div>
 
-                        <div class="sect-art">
-                          <p style = "font-size: 14pt">Creating art.</p>
-                          <p><button onclick = "document.location = 'artimages.html'">Check it out</button>
-                        </div>
+            <div class="goodbye">
+                <p>I hope you enjoyed getting to know me a little better. 
+                Check out my socials below to learn more.</p>
+            </div>
+          </div>
 
-                        <div class="sect-musical">
-                          <p style = "font-size: 14pt">Musicals.</p>
-                            <p><button onclick="addRandomMusical()">My Favorite Musicals</button>
-                          <div id="musical-container"></div></p>
-                        </div>
-
-                        <div class="sect-map">
-                          <div class="header-places"><h3 style = "font-size: 32px">My Happy Places</h3></div>
-                          <br>
-                          <div id="img-content">
-                            <div id="map"></div>
-                          </div>
-                        </div>
-
-                        <div class="goodbye">
-                          <p>I hope you enjoyed learning a little more about
-                          me! <br><br>
-                          Check out the rest of my portfolio, then <a href = "/comments.html" class = 'comment-link'>leave a comment</a>.</p>
-                          <br>
-                        </div>
-                    </div>
-                    <div class="bottom">
-                      <div class="row">
-                        <div class="column"> </div>
-                        <div class="column">
-                          <div class = "row">
-                            <div class="column">
-                              <div class="logo">
-                                 <a href = "https://www.linkedin.com/in/abbymapes" target="_blank">
-                                  <img src = "/images/linkedin.png" alt = "LinkedIn Logo." 
+            <div class="bottom">
+              <div class="row">
+                <div class="column"> </div>
+                <div class="column">
+                  <div class = "row">
+                    <div class="column">
+                      <div class="logo">
+                        <a href = "https://www.linkedin.com/in/abbymapes" target="_blank">
+                        <img src = "/images/linkedin.png" alt = "LinkedIn Logo." 
                                       width = "100%"/></a>
-                              </div>
-                            </div>
-
-                            <div class="column">
-                              <div class="logo">
-                                 <a href = "https://github.com/abbymapes" target="_blank">
-                                  <img src = "/images/git.png" alt = "GitHub Logo." 
-                                      width = "100%"/></a>
-                              </div>
-                            </div>
-
-                            <div class="column">
-                              <div class="logo">
-                                 <a href = "mailto:abigail.mapes@duke.edu" target="_blank">
-                                  <img src = "/images/email.png" alt = "Email Logo." 
-                                      width = "100%"/></a>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="column"> </div>
                       </div>
                     </div>
-                </div>
 
-                <div class = "side"></div>
+                    <div class="column">
+                      <div class="logo">
+                      <a href = "https://github.com/abbymapes" target="_blank">
+                      <img src = "/images/git.png" alt = "GitHub Logo." 
+                                      width = "100%"/></a>
+                      </div>
+                    </div>
+
+                    <div class="column">
+                      <div class="logo">
+                        <a href = "mailto:abigail.mapes@duke.edu" target="_blank">
+                                  <img src = "/images/email.png" alt = "Email Logo." 
+                                      width = "100%"/></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="column"> </div>
+              </div>
             </div>
+          </div>
         </div>
-    </body>
-  </html>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,89 +1,82 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>My Portfolio</title>
-        <link rel="stylesheet" href="style.css">
-        <link href='https://fonts.googleapis.com/css?family=GFS Neohellenic' rel='stylesheet'>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <script src="script.js"></script>
-    </head>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <script src="script.js"></script>
+  </head>
 
-    <body onload="getUserMode()">
-      <div id = "content" class = "rainbow-text">
-      <div class="topnav" id="myTopnav">
-        <a href="/index.html" class="active">Home</a>
-        <a href="/about.html">About Me</a>
-        <a href="/resume.html">Resume</a>
-        <a href="/comments.html">Comments</a>
-        <a href="javascript:void(0);" class="icon" onclick="getMenuBar()">
-          <i class="fa fa-bars"></i>
-        </a>
-      </div>
-            <div class="grid-overall-container">
+  <body onload="getUserMode()">
+    <div id = "content" class = "gradient-background-small">
+    <div class="topnav" id="myTopnav">
+      <a href="/index.html" class="active">Home</a>
+      <a href="/about.html">About</a>
+      <a href="/projects.html">Projects</a>
+      <a href="/resume.html">Resume</a>
+      <a href="/comments.html">Comments</a>
+      <a href="javascript:void(0);" class="icon" onclick="getMenuBar()">
+      <i class="fa fa-bars"></i>
+      </a>
+    </div>
+    <div class="grid-overall-container">
+      <div class="center">
+        <div class="header"><h1>Comments</h1></div>
+        <div class="comments">
+          <div id = "comment-form"></div>
+            <table id = "comment-container"></table>
+            <form action = "/data" method = "POST">
+              <br>
+              <label for="quantity" class="small-text">Maximum Number of Comments to Display:</label>
+              <select name="quantity" id="quantity" onchange="getComments()">
+                <option value="5" selected="true">5</option>
+                <option value="10">10</option>
+                <option value="15">15</option>
+                <option value="all">All</option>
+                </select>
+              <br><br>
+            </form>
+            <p><br></p>
+          </div>
 
-                <div class="side"></div>
-
-                <div class="center">
-                    <div class="header"><h1>Comments</h1></div>
-                    <div class="comments">
-                        <div id = "comment-form"></div>
-
-                          <table id = "comment-container"></table>
-
-                            <form action = "/data" method = "POST">
-                            <br>
-                            <label for="quantity" class="small-text">Maximum Number of Comments to Display:</label>
-                                <select name="quantity" id="quantity" onchange="getComments()">
-                                <option value="5" selected="true">5</option>
-                                <option value="10">10</option>
-                                <option value="15">15</option>
-                                <option value="all">All</option>
-                                </select>
-                                <br><br>
-                            </form>
-
-                          <button onclick="deleteComments()">
-                              Delete Comments</button>
-                          <p><br></p>
+          <div class="bottom">
+            <div class="row">
+              <div class="column"> </div>
+              <div class="column">
+                <div class = "row">
+                  <div class="column">
+                    <div class="logo">
+                      <a href = "https://www.linkedin.com/in/abbymapes" target="_blank">
+                      <img src = "/images/linkedin.png" alt = "LinkedIn Logo." 
+                                        width = "100%"/></a>
                     </div>
-                    <div class="bottom">
-                        <div class="row">
-                          <div class="column"> </div>
-                          <div class="column">
-                            <div class = "row">
-                              <div class="column">
-                                <div class="logo">
-                                   <a href = "https://www.linkedin.com/in/abbymapes" target="_blank">
-                                    <img src = "/images/linkedin.png" alt = "LinkedIn Logo." 
-                                        width = "100%"/></a>
-                                </div>
-                              </div>
+                  </div>
 
-                              <div class="column">
-                                <div class="logo">
-                                   <a href = "https://github.com/abbymapes" target="_blank">
-                                    <img src = "/images/git.png" alt = "GitHub Logo." 
+                  <div class="column">
+                    <div class="logo">
+                      <a href = "https://github.com/abbymapes" target="_blank">
+                      <img src = "/images/git.png" alt = "GitHub Logo." 
                                         width = "100%"/></a>
-                                </div>
-                              </div>
-
-                              <div class="column">
-                                <div class="logo">
-                                   <a href = "mailto:abigail.mapes@duke.edu" target="_blank">
-                                    <img src = "/images/email.png" alt = "Email Logo." 
-                                        width = "100%"/></a>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="column"> </div>
-                        </div>
                     </div>
+                  </div>
+
+                  <div class="column">
+                    <div class="logo">
+                        <a href = "mailto:abigail.mapes@duke.edu" target="_blank">
+                        <img src = "/images/email.png" alt = "Email Logo." 
+                                        width = "100%"/></a>
+                    </div>
+                  </div>
                 </div>
-                <div class = "side"></div>
+              </div>
+              <div class="column"> </div>
             </div>
+          </div>
         </div>
-    </body>
-  </html>
+      </div>
+    </div>
+  </body>
+</html>
