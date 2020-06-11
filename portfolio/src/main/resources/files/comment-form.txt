@@ -1,7 +1,7 @@
 %s
 
 <form action = "/data?email=%s" method = "POST">
-<p style="font-size:18pt"><br> Leave a Comment: <br></p>
+<p style="font-size:20pt; color:#4c4d4d"><br> Leave a Comment: <br></p>
 <textarea name="name-input" placeholder= "Write Display Name Here" id = "name-input"></textarea>
 <br><br>
 <textarea name="text-input" placeholder="Write Comment Here"></textarea>

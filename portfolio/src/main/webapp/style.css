@@ -61,7 +61,7 @@
 .avatar {
   border-radius: 50%;
   vertical-align: middle;
-  width: 40%;
+  width: 30%;
   min-width: 200px;
   height: auto;
 }
@@ -80,7 +80,9 @@ h2{
   font-size: 25pt;
   color: hsl(180, 1%, 30%);
   margin: 20px;
-  padding: 20px;
+  margin-bottom: 50px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .line {
@@ -93,7 +95,6 @@ h2{
 
 .pages{
   font-size: 20pt;
-  padding: 5px;
 }
 
 .pages:hover {
@@ -194,14 +195,6 @@ h2{
   outline-style: solid;
   outline-color: hsl(15, 100%, 98%);
 }
-
-.sect-map {
-  grid-area: places; 
-  background-color: hsl(0, 0%, 100%);
-  outline-style: solid;
-  outline-color: hsl(15, 100%, 98%);
-}
-
 .goodbye { 
   grid-area: footer; 
   background-color: hsl(0, 0%, 100%);
@@ -218,7 +211,6 @@ h2{
     'fun fun fun'
     'int int int'
     'b b b'
-    'places places places'
     'more more more'
     'footer footer footer'
     'c c c';
@@ -230,7 +222,7 @@ h2{
   justify-content: center;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 905px) {
   .grid-container {
     display: grid;
     grid-template-areas:
@@ -242,7 +234,6 @@ h2{
     'fun'
     'int'
     'b'
-    'places'
     'more'
     'footer'
     'c';
@@ -257,19 +248,18 @@ h2{
 
 .grid-container > div {
   text-align: center;
-  padding: 10px 10px;
+  padding: 10px 50px;
   align-items: center;
 }
 
 /* Container to center grid */
 .center {grid-area: middle;}
 .grid-overall-container{
-    display: grid;
     grid-template-areas: 'left middle right';
     padding: 10px;
     align-content: center;
     justify-content: center;
-    max-width: 800px;
+    max-width: 80%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -338,7 +328,7 @@ h2{
   margin-left: auto;
   margin-right: auto;
   font-family: 'Montserrat';
-  font-size: 16px;
+  font-size: 16pt;
   min-height: 110%;
   color: hsl(180, 1%, 50%);
 }
@@ -366,7 +356,7 @@ h2{
 }
 
 .gradient-background {
-  background-image: linear-gradient(to bottom, 
+  background-image: linear-gradient(to bottom, hsl(170, 72%, 98%),
                                             hsl(170, 72%, 95%),
                                             hsl(170, 72%, 90%),
                                             hsl(170, 72%, 85%),
@@ -375,7 +365,7 @@ h2{
 }
 
 .gradient-background-small {
-  background-image: linear-gradient(to bottom, 
+  background-image: linear-gradient(to bottom, hsl(170, 72%, 98%),
                                             hsl(170, 72%, 95%),
                                             hsl(170, 72%, 90%),
                                             hsl(170, 72%, 85%));
@@ -402,6 +392,10 @@ img {
   min-width: 50px;
 }
 
+.logo img{
+  height: 50px;
+  width: 50px;
+}
 .logo img:hover {
   transform: scale(1.1);
 }
@@ -423,7 +417,7 @@ select{
   border: solid 1px hsl(180, 1%, 60%);
   background-color: hsl(0, 0%, 100%);
   font-family: 'Montserrat';
-  font-size: 12px;
+  font-size: 10pt;
   color: hsl(180, 1%, 30%);
 }
 
@@ -434,7 +428,7 @@ select:hover {
 option{
   background-color: hsl(0, 0%, 100%);
   font-family: 'Montserrat', sans-serif;
-  font-size: 12px;
+  font-size: 10pt;
 }
 
 option:hover {
@@ -443,7 +437,7 @@ option:hover {
 
 /* Comments */
 .small-text{
-  font-size: 14px;
+  font-size: 11pt;
 }
 
 .comments {
@@ -456,7 +450,7 @@ input{
   border: solid 1px hsl(180, 1%, 60%);
   background-color: hsl(0, 0%, 100%);
   font-family: 'Montserrat';
-  font-size: 12px;
+  font-size: 10pt;
   color: hsl(180, 1%, 30%);
 }
 
@@ -468,11 +462,15 @@ input:hover {
 form {
   font-family:'Montserrat';
   font-size: 16px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 80%;
 }
 
 textarea{
   font-family:'Montserrat';
-  min-width: 90%;
+  min-width: 100%;
+  font-size: 11pt;
 }
 
 textarea::placeholder {
@@ -502,7 +500,7 @@ table {
 th {
   border: 1pt hsl(180, 1%, 40%) solid;
   text-align: left;
-  font-size: 12px;
+  font-size: 12pt;
   padding: 10px;
   color: hsl(180, 1%, 10%);
   width: 40%;
@@ -514,7 +512,7 @@ th {
 td {
   border: 1pt hsl(180, 1%, 40%) solid;
   text-align: left;
-  font-size: 12px;
+  font-size: 12pt;
   padding: 10px;
   width: 60%;
   color: hsl(180, 1%, 40%);
