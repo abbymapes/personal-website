@@ -203,17 +203,12 @@ h2{
   grid-template-areas:
     'school school school'
     'campus spire club'
-    'a a a'
     'fun fun fun'
     'int int int'
-    'b b b'
-    'more more more'
     'footer footer footer'
     'c c c';
   grid-gap: 10px;
   grid-template-columns: repeat(3, 1fr);
-  background-color: rgba(255, 255, 255, 0.75);
-  padding: 10px;
   align-content: center;
   justify-content: center;
 }
@@ -226,17 +221,12 @@ h2{
     'campus'
     'spire'
     'club'
-    'a'
     'fun'
     'int'
-    'b'
-    'more'
     'footer'
     'c';
     grid-gap: 10px;
     grid-template-columns: 1fr;
-    background-color: rgba(255, 255, 255, 0.75);
-    padding: 10px;
     align-content: center;
     justify-content: center;
   }
@@ -267,7 +257,7 @@ h2{
 }
 
 /* Mobile phone */
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 670px) {
   .grid-overall-container {
     grid-template-areas: 'left middle right';
     padding: 10px;
@@ -276,7 +266,6 @@ h2{
     max-width: 95%;
     margin-left: auto;
     margin-right: auto;
-    display: grid;
   }
 }
 
@@ -297,6 +286,7 @@ h2{
 
 /* Project page */
 .project-left-1 { 
+  margin: auto;
   text-align: left;
   background-color: hsl(0, 0%, 100%);
   outline-style: solid;
@@ -304,7 +294,8 @@ h2{
 }
 
 .project-right-1 { 
-  text-align: right;
+  margin: auto;
+  text-align: left;
   grid-area: right1; 
   background-color: hsl(0, 0%, 100%);
   outline-style: solid;
@@ -312,6 +303,7 @@ h2{
 }
 
 .project-left-2 { 
+  margin: auto;
   text-align: left;
   grid-area: left2; 
   background-color: hsl(0, 0%, 100%);
@@ -320,7 +312,8 @@ h2{
 }
 
 .project-right-2 { 
-  text-align: right;
+  margin-top: auto;
+  text-align: left;
   grid-area: right2; 
   background-color: hsl(0, 0%, 100%);
   outline-style: solid;
@@ -328,7 +321,6 @@ h2{
 }
 
 .project-grid-container {
-  display: grid;
   grid-template-areas:
     'left1'
     'right1'
@@ -336,13 +328,16 @@ h2{
     'right2';
   grid-gap: 10px;
   grid-template-columns: repeat(1, 1fr);
-  background-color: rgba(255, 255, 255, 0.75);
-  padding: 10px;
 }
 
 .project-grid-container > div {
   padding: 0pt 5pt;
   align-items: center;
+}
+
+.language{
+  text-align: center;
+  padding-bottom: 5pt;
 }
 
 
@@ -421,6 +416,7 @@ img {
   height: 50px;
   width: 50px;
 }
+
 .logo img:hover {
   transform: scale(1.1);
 }
@@ -575,11 +571,6 @@ html,body{
   max-width: 200px;
 }
 
-.image-thumbnails img:hover {
-  border: thick solid white;
-  transform: scale(1.3);
-}
-
 .image-thumbnails-art {
   display: flex;
   flex-wrap: wrap;
@@ -590,11 +581,6 @@ html,body{
   margin: 10px;
   max-height: 300px;
   max-width: 300px;
-}
-
-.image-thumbnails-art img:hover {
-  border: thick solid white;
-  transform: scale(1.3);
 }
 
 #img-heading {

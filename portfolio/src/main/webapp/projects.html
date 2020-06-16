@@ -8,7 +8,6 @@
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="script.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDjXCSPI4yzByHxDXafuG1ScI5opZmOAyg"></script>
   </head>
 
   <body>
@@ -30,23 +29,49 @@
           <br>
           <div class="project-grid-container">
             <div class="project-left-1">
-              <h3 style = "color: hsl(180, 1%, 30%)">Huffman</h3>
-              <p> Description here</p>
+              <h3 style = "color: hsl(180, 1%, 30%); text-align: center; padding-top:5pt">Autocomplete</h3>
+              <p>Created an autocomplete program that considers terms 
+                  starting with a user query and suggests possible completions for 
+                  the user's typed text based on each term’s predetermined weight. By using a HashMap 
+                  with prefix keys and corresponding weight-sorted lists of terms as 
+                  values, the algorithm provides an O(1) implementation to return  
+                  top matches for user queries, with a tradeoff of requiring more 
+                  memory. <br>
+                  <div class = "language">Language: <b>Java </b></div></p>
             </div>
 
             <div class="project-right-1">
-              <h3 style = "color: hsl(180, 1%, 30%)">Cache Simulator</h3>
-              <p> Description here</p>
+              <h3 style = "color: hsl(180, 1%, 30%); text-align: center; padding-top:5pt">Huffman</h3>
+              <p>Implemented a Huffman coding program that compresses data in a file by using fewer 
+                  bits to encode frequently occurring characters. To do so, the program 
+                  uses a tree that stores characters at its leaves and whose root-to-leaf 
+                  paths define bit sequence encodings for each character. A greedy 
+                  algorithm chooses the least-used characters to be the leaves at every 
+                  level of the tree, ensuring that frequently used characters have the 
+                  shortest bit encodings. <br>
+                  <div class = "language">Language: <b>Java </b></div></p>
             </div>
 
-            <div class="project-left-2">
-              <h3 style = "color: hsl(180, 1%, 30%)">Clever Hangman</h3>
-              <p> Description here</p>
+            <div class="project-left-2" >
+              <h3 style = "color: hsl(180, 1%, 30%); text-align: center; padding-top:5pt">Clever Hangman</h3>
+              <p>Developed a Clever Hangman game that makes it harder for users to 
+                  guess the program’s secret word. Instead of choosing one secret word at the 
+                  beginning of the game, the “clever” program will change its secret word each 
+                  time the user guesses a letter. Each change made by the program will 
+                  maximize the number of possible secret words that fit in the template, 
+                  while keeping all changes consistent with previously guessed letters. <br>
+                  <div class = "language">Language: <b>Python</b></div></p>
             </div>
 
-            <div class="project-right-2" >
-              <h3 style = "color: hsl(180, 1%, 30%)">Recommender</h3>
-              <p> Description here</p>
+            <div class="project-right-2">
+              <h3 style = "color: hsl(180, 1%, 30%); text-align: center; padding-top:5pt">Cache Simulator</h3>
+              <p>Created a cache simulator program that acts as a write-back and 
+                  write-allocate cache. The program takes a file of load and store 
+                  requests, cache size in KB, associativity, and block size in bytes 
+                  as input parameters. For every access, the simulator prints out the 
+                  kind of access, the hex address being accessed, and whether the access 
+                  is a hit or a miss.<br>
+                  <div class = "language">Language: <b>C</b></div></p>
             </div>
           </div>
 
